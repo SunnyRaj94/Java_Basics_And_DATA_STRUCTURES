@@ -33,16 +33,13 @@ public class Utility
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please Enter Year");
 		int year = sc.nextInt();
-		try {
 		if(year<0 || year>9999)
 		{
 			System.out.println("Please enter in correct format");
 			return inputInt();
 		}
 		else
-			return year;
-		}
-		finally {sc.close();}
+			return year;	
 	}
 	
 

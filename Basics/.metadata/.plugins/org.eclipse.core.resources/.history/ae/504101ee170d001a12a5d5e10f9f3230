@@ -14,36 +14,27 @@ public class Utility
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please Enter the username");
 		String username = sc.next();
-		try
+		if(username.length()<3)
 		{
-			if(username.length()<3)
-			{
-					System.out.println("Username must be of greater than 3 digits");
-					return inputString();
-			}
-			else
-				return username;
+			System.out.println("Username must be of greater than 3 digits");
+			return inputString();
 		}
-		finally {
-			sc.close();
-		}
+		else
+			return username;	
 	}
 	public static int inputInt() 
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Please Enter Year");
 		int year = sc.nextInt();
-		try {
-		if(year<0 || year>9999)
+		if(year<1000 && year>9999)
 		{
 			System.out.println("Please enter in correct format");
 			return inputInt();
 		}
 		else
-			return year;
+			return year;	
 		}
-		finally {sc.close();}
-	}
 	
 
 }

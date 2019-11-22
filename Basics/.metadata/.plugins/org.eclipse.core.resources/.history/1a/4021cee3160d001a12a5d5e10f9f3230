@@ -8,7 +8,8 @@ public class Username
 {
 	public static void main(String[] args) 
 	{
-		String name = Utility.inputString();
+		Username u = new Username();
+		String name = Utility.input();
 		System.out.println("Hello "+name+" , How are you?");
 		
 		
