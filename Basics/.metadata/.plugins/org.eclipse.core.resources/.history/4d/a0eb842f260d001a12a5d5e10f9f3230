@@ -1,0 +1,34 @@
+package com.sunny.basiccoreprograms;
+
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to find percentage of head and tail in any throw 
+**/
+
+public class Head_Tail 
+{
+	public static int[] perc(int n)
+	{
+		int [] result= {0,0};
+		for(int i=0;i<n;i++) 
+		{
+			if (Math.random() < 0.5)
+				{
+				result[0]++;
+				}
+			else
+				{
+				result[1]++;
+				}
+		return n;
+		
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter the number of times you want to flip an coin");
+		int n = Utility.inputInteger();
+		
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.sunny.basiccoreprograms;
+
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to find percentage of head and tail in any throw 
+**/
+
+public class Head_Tail 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+
+}

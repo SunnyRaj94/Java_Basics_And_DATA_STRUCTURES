@@ -28,6 +28,8 @@ public class Utility
 			sc.close();
 		}
 	}
+	
+	//for taking int input from user..
 	public static int inputInt() 
 	{
 		Scanner sc = new Scanner(System.in);
@@ -43,6 +45,26 @@ public class Utility
 			return year;
 		}
 		finally {sc.close();}
+	}
+	
+	//for taking int input from user..
+	public static int inputInteger() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please Enter Number");
+		int number = sc.nextInt();
+		sc.close();
+		return number;
+		
+	}
+	
+	//for taking double input from user..
+	public static double inputDouble() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please Enter Number");
+		double number = sc.nextDouble();
+		sc.close();
+		return number;
+		
 	}
 	
 
