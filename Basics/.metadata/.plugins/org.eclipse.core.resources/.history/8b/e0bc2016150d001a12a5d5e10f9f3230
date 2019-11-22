@@ -1,9 +1,7 @@
 package com.sunny.basiccoreprograms;
-/*
-* created by:SunnyRaj
-* Date 22/11/2019
-* Purpose: for replacing uusername.....
-**/
+
+import java.util.Scanner;
+
 public class Username 
 {
 	public static void main(String[] args) 
