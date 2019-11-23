@@ -6,13 +6,36 @@ package com.sunny.functional;
 **/
 public class Array2d 
 {
-	public static void output(int[][] arr) 
+	public static void outputInt(int[][] arr) 
 	{
 		for(int i=0;i<arr.length;i++)
 		{
 			for(int j=0;j<arr[0].length;j++)
 			{
-				Utility.output(arr[i][j]);
+				Utility.outputInt(arr[i][j]);
+			}
+			System.out.println("");
+		}
+	}
+	
+	public static void outputDouble(double [][] arr) 
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				Utility.outputDouble(arr[i][j]);
+			}
+			System.out.println("");
+		}
+	}
+	public static void outputBool(boolean [][] arr) 
+	{
+		for(int i=0;i<arr.length;i++)
+		{
+			for(int j=0;j<arr[0].length;j++)
+			{
+				Utility.outputBoolean(arr[i][j]);
 			}
 			System.out.println("");
 		}
@@ -21,20 +44,54 @@ public class Array2d
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to 2d array programm");
+		System.out.println("Enter 1 for integer array");
+		System.out.println("Enter 2 for double array");
+		System.out.println("Enter 3 for boolean array");
+		int input =Utility.inputInteger();
 		System.out.println("Enter number of rows");
 		int r = Utility.inputInteger();
 		System.out.println("Enter number of columns");
 		int c = Utility.inputInteger();
-		int [][] arr = new int[r][c];
-		for(int i=0;i<arr.length;i++)
-		{
-			for(int j=0;j<arr[0].length;j++)
+		switch(input)
 			{
-				arr[i][j]=Utility.inputInteger();
+		case 1:
+			int [][] arr = new int[r][c];
+			for(int i=0;i<arr.length;i++)
+			{
+				for(int j=0;j<arr[0].length;j++)
+				{
+					arr[i][j]=Utility.inputInteger();
+				}
 			}
-		}
-		Array2d.output(arr);
-		System.out.println("Thank you");
+			Array2d.outputInt(arr);
+			System.out.println("Thank you");
+			break;
+		case 2:
+			double [][] arrd = new double[r][c];
+			for(int i=0;i<arrd.length;i++)
+			{
+				for(int j=0;j<arrd[0].length;j++)
+				{
+					arrd[i][j]=Utility.inputDouble();
+				}
+			}
+			Array2d.outputDouble(arrd);
+			System.out.println("Thank you");
+			break;
+		case 3:
+			boolean [][] arrb = new boolean[r][c];
+			for(int i=0;i<arrb.length;i++)
+			{
+				for(int j=0;j<arrb[0].length;j++)
+				{
+					arrb[i][j]=Utility.inputBool();
+				}
+			}
+			Array2d.outputBool(arrb);
+			System.out.println("Thank you");
+			break;
+		
+			}
 
 	}
 
