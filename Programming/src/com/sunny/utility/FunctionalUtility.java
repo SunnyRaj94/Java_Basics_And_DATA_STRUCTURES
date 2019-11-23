@@ -1,5 +1,9 @@
 package com.sunny.utility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this is a utilty class i made for common ocurring things programms
+**/
 import java.io.PrintWriter;
 import java.util.Scanner;
 

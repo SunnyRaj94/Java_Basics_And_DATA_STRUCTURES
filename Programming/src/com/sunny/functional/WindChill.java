@@ -1,5 +1,9 @@
 package com.sunny.functional;
-
+/*
+* created by:SunnyRaj
+* Date 23/11/2019
+* Purpose: this programm is used to find the effective temperature (the wind chill) to be
+**/
 import com.sunny.utility.FunctionalUtility;
 
 public class WindChill 
