@@ -13,6 +13,15 @@ public class Utility
 		return n ;
 		
 	}
+	public static double inputDouble()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number");
+		double n = sc.nextDouble();
+		return n ;
+		
+	}
+	
 	public static void output(int n)
 	{
 		PrintWriter p = new PrintWriter(System.out);
