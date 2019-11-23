@@ -1,9 +1,9 @@
-package com.sunny.functional;
+package com.sunny.utility;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Utility 
+public class FunctionalUtility 
 {
 	public static int inputInteger()
 	{

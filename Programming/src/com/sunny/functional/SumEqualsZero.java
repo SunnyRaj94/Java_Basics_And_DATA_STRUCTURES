@@ -1,4 +1,7 @@
 package com.sunny.functional;
+
+import com.sunny.utility.FunctionalUtility;
+
 /*
 * created by:SunnyRaj
 * Date 23/11/2019
@@ -35,13 +38,13 @@ public class SumEqualsZero
 
 			//enter the array size
 			System.out.print("Enter Size of Array :");
-			int size=Utility.inputInteger();
+			int size=FunctionalUtility.inputInteger();
 			int arr[]=new int [size];//create array & read values one by one
 
 			for(int i=0;i<arr.length;i++)
 			{
 				System.out.print("Enter "+(i+1)+" Value :");
-				arr[i]=Utility.inputInteger();
+				arr[i]=FunctionalUtility.inputInteger();
 			}
 
 			SumEqualsZero t1=new SumEqualsZero();

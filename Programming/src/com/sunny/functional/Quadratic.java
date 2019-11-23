@@ -1,4 +1,7 @@
 package com.sunny.functional;
+
+import com.sunny.utility.FunctionalUtility;
+
 /*
 * created by:SunnyRaj
 * Date 23/11/2019
@@ -7,7 +10,7 @@ package com.sunny.functional;
 public class Quadratic {
     public static void main(String[] args) 
     {
-        double a = Utility.inputDouble(), b = Utility.inputDouble(), c = Utility.inputDouble();;
+        double a = FunctionalUtility.inputDouble(), b = FunctionalUtility.inputDouble(), c = FunctionalUtility.inputDouble();;
         double root1, root2;
         double determinant = b * b - 4 * a * c;
         // condition for real and different roots

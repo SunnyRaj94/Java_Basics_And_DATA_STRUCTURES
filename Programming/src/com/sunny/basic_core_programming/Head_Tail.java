@@ -1,5 +1,7 @@
 package com.sunny.basic_core_programming;
 
+import com.sunny.utility.BasicUtility;
+
 /*
 * created by:SunnyRaj
 * Date 22/11/2019
@@ -30,7 +32,7 @@ public class Head_Tail
 	public static void main(String[] args) 
 	{
 		System.out.println("Enter the number of times you want to flip an coin");
-		int n = Utility.inputInteger();
+		int n = BasicUtility.inputInteger();
 		double res[]=Head_Tail.perc(n);
 		double head=res[1]/(n);
 		double tail =res[0]/(n);

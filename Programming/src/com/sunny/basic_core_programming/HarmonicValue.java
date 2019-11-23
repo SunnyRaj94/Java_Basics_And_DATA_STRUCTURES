@@ -1,4 +1,7 @@
 package com.sunny.basic_core_programming;
+
+import com.sunny.utility.BasicUtility;
+
 /*
 * created by:SunnyRaj
 * Date 22/11/2019
@@ -22,7 +25,7 @@ public class HarmonicValue
 	public static void main(String[] args) 
 	{
 	   	System.out.println("Enter a number: ");
-		double n=Utility.inputDouble();
+		double n=BasicUtility.inputDouble();
     	double result=harmonicValue(n);
 		
 		if(n>0)

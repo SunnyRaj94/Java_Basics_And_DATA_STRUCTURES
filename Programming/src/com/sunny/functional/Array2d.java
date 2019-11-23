@@ -1,4 +1,7 @@
 package com.sunny.functional;
+
+import com.sunny.utility.FunctionalUtility;
+
 /*
 * created by:SunnyRaj
 * Date 22/11/2019
@@ -12,7 +15,7 @@ public class Array2d
 		{
 			for(int j=0;j<arr[0].length;j++)
 			{
-				Utility.outputInt(arr[i][j]);
+				FunctionalUtility.outputInt(arr[i][j]);
 			}
 			System.out.println("");
 		}
@@ -24,7 +27,7 @@ public class Array2d
 		{
 			for(int j=0;j<arr[0].length;j++)
 			{
-				Utility.outputDouble(arr[i][j]);
+				FunctionalUtility.outputDouble(arr[i][j]);
 			}
 			System.out.println("");
 		}
@@ -35,7 +38,7 @@ public class Array2d
 		{
 			for(int j=0;j<arr[0].length;j++)
 			{
-				Utility.outputBoolean(arr[i][j]);
+				FunctionalUtility.outputBoolean(arr[i][j]);
 			}
 			System.out.println("");
 		}
@@ -47,11 +50,11 @@ public class Array2d
 		System.out.println("Enter 1 for integer array");
 		System.out.println("Enter 2 for double array");
 		System.out.println("Enter 3 for boolean array");
-		int input =Utility.inputInteger();
+		int input =FunctionalUtility.inputInteger();
 		System.out.println("Enter number of rows");
-		int r = Utility.inputInteger();
+		int r = FunctionalUtility.inputInteger();
 		System.out.println("Enter number of columns");
-		int c = Utility.inputInteger();
+		int c = FunctionalUtility.inputInteger();
 		switch(input)
 			{
 		case 1:
@@ -60,7 +63,7 @@ public class Array2d
 			{
 				for(int j=0;j<arr[0].length;j++)
 				{
-					arr[i][j]=Utility.inputInteger();
+					arr[i][j]=FunctionalUtility.inputInteger();
 				}
 			}
 			Array2d.outputInt(arr);
@@ -72,7 +75,7 @@ public class Array2d
 			{
 				for(int j=0;j<arrd[0].length;j++)
 				{
-					arrd[i][j]=Utility.inputDouble();
+					arrd[i][j]=FunctionalUtility.inputDouble();
 				}
 			}
 			Array2d.outputDouble(arrd);
@@ -84,7 +87,7 @@ public class Array2d
 			{
 				for(int j=0;j<arrb[0].length;j++)
 				{
-					arrb[i][j]=Utility.inputBool();
+					arrb[i][j]=FunctionalUtility.inputBool();
 				}
 			}
 			Array2d.outputBool(arrb);

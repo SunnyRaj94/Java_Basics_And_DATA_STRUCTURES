@@ -1,4 +1,4 @@
-package com.sunny.basic_core_programming;
+package com.sunny.utility;
 /*
 * created by:SunnyRaj
 * Date 22/11/2019
@@ -6,7 +6,7 @@ package com.sunny.basic_core_programming;
 **/
 import java.util.Scanner;
 
-public class Utility
+public class BasicUtility
 {
 	//for taking sting input from user..
 	public static String inputString() 

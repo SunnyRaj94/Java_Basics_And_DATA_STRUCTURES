@@ -1,5 +1,7 @@
 package com.sunny.basic_core_programming;
 
+import com.sunny.utility.BasicUtility;
+
 /*
 * created by:SunnyRaj
 * Date 22/11/2019
@@ -10,7 +12,7 @@ public class PowerOf2
 	public static void main(String[] args) 
 		{
 			System.out.println("Enter a number:");
-	        int num=Utility.inputInteger();
+	        int num=BasicUtility.inputInteger();
 	        if(num<31)
 	        {
 	        	System.out.println("Power of 2^"+num+" is: "+(Math.pow(2, num)));

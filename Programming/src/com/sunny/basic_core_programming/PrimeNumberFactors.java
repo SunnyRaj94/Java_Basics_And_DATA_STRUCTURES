@@ -1,5 +1,7 @@
 package com.sunny.basic_core_programming;
 
+import com.sunny.utility.BasicUtility;
+
 /*
 * created by:SunnyRaj
 * Date 22/11/2019
@@ -23,7 +25,7 @@ public class PrimeNumberFactors
 		public static void main(String[] args) 
 		{ 
 			System.out.println("Enter the no. to find PrimeFactors:");
-			int n=Utility.inputInteger();
+			int n=BasicUtility.inputInteger();
 			System.out.println();
 			System.out.println("The prime factors for the "+n+" is:");
 			System.out.println();

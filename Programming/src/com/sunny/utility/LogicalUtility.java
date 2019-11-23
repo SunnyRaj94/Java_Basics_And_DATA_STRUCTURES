@@ -1,4 +1,4 @@
-package com.sunny.logical;
+package com.sunny.utility;
 
 public class LogicalUtility {
 
