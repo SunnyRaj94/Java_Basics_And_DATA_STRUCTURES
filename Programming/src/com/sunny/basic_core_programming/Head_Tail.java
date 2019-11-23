@@ -1,4 +1,4 @@
-package com.sunny.basiccoreprograms;
+package com.sunny.basic_core_programming;
 
 /*
 * created by:SunnyRaj
