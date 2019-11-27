@@ -5,7 +5,11 @@ package com.sunny.logical;
 * Purpose: this is a gambling game programm
 **/
 import com.sunny.utility.LogicalUtility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to play a gamble game until player wins or loose
+**/
 public class Gambler { 
 
     public static void main(String[] args) {

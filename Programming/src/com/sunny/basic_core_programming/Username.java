@@ -13,8 +13,5 @@ public class Username
 	{
 		String name = BasicUtility.inputString();
 		System.out.println("Hello "+name+" , How are you?");
-		
-		
 	}
-
 }

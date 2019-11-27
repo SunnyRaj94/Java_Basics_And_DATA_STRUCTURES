@@ -1,0 +1,2 @@
+Using FileReader class: Convenience class for reading character files. The constructors of this class assume that the default character encoding and the default byte-buffer size are appropriate.
+Constructors defined in this class are:

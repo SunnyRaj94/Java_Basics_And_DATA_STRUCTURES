@@ -1,5 +1,9 @@
-package com.sunny.junit_testing.Programm;
-
+package com.sunny.junit_testing;
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to find sthat what is te weekdays on which the particular date is occuring
+**/
 import com.sunny.utility.TestingUtility;
 
 public class DayOfweek 

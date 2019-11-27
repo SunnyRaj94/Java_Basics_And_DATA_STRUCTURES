@@ -1,6 +1,11 @@
 package com.sunny.logical;
 
 import java.util.Scanner;
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to play a popular tic tac toe game with the pc
+**/
 
 public class TicTacToe {
 

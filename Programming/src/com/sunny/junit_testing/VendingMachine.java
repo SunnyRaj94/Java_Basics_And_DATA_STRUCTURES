@@ -1,11 +1,17 @@
-package com.sunny.junit_testing.Programm;
+package com.sunny.junit_testing;
 
 import com.sunny.utility.TestingUtility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to return the change of a given amoount into shortest combination of provided
+*                             currency notes
+**/
 public class VendingMachine 
 {
 	static int[] notes= {1,2,5,10,50,100,500,1000};
 	static int totalnotes=0;
+	//this method is printing out the change of given currency
 	public String change(int amount,int n)
 	{
 		if (amount==0||n<0)
@@ -17,7 +23,7 @@ public class VendingMachine
 				amount=amount-notes[n];
 				count++;
 			}
-			System.out.println("you got  "+count+"  "+notes[n]+"rupee notes");
+			System.out.println("you got  "+count+"  "+notes[n]+"rupee notes");// notes get changed
 			n--;totalnotes=totalnotes+count;
 			return change(amount,n);
 		}

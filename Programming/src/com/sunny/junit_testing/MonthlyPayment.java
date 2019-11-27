@@ -1,7 +1,11 @@
-package com.sunny.junit_testing.Programm;
+package com.sunny.junit_testing;
 
 import com.sunny.utility.TestingUtility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to find the monthly payment of an empployee by using given formulae
+**/
 public class MonthlyPayment {
 
 	public static void main(String[] args) 

@@ -1,9 +1,9 @@
 package com.sunny.logical;
-
-import java.util.Arrays;
-
-import com.sunny.utility.LogicalUtility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to find a random generated coupon number in minimun trails
+**/
 public class Coupon 
 {
 	/*public static int random(int n)

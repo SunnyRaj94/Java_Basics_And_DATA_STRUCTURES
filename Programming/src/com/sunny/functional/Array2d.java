@@ -9,41 +9,6 @@ import com.sunny.utility.FunctionalUtility;
 **/
 public class Array2d 
 {
-	public static void outputInt(int[][] arr) 
-	{
-		for(int i=0;i<arr.length;i++)
-		{
-			for(int j=0;j<arr[0].length;j++)
-			{
-				FunctionalUtility.outputInt(arr[i][j]);
-			}
-			System.out.println("");
-		}
-	}
-	
-	public static void outputDouble(double [][] arr) 
-	{
-		for(int i=0;i<arr.length;i++)
-		{
-			for(int j=0;j<arr[0].length;j++)
-			{
-				FunctionalUtility.outputDouble(arr[i][j]);
-			}
-			System.out.println("");
-		}
-	}
-	public static void outputBool(boolean [][] arr) 
-	{
-		for(int i=0;i<arr.length;i++)
-		{
-			for(int j=0;j<arr[0].length;j++)
-			{
-				FunctionalUtility.outputBoolean(arr[i][j]);
-			}
-			System.out.println("");
-		}
-	}
-	
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to 2d array programm");
@@ -66,7 +31,7 @@ public class Array2d
 					arr[i][j]=FunctionalUtility.inputInteger();
 				}
 			}
-			Array2d.outputInt(arr);
+			FunctionalUtility.outputIntArr(arr);
 			System.out.println("Thank you");
 			break;
 		case 2:
@@ -78,7 +43,7 @@ public class Array2d
 					arrd[i][j]=FunctionalUtility.inputDouble();
 				}
 			}
-			Array2d.outputDouble(arrd);
+			FunctionalUtility.outputDoubleArr(arrd);
 			System.out.println("Thank you");
 			break;
 		case 3:
@@ -90,7 +55,7 @@ public class Array2d
 					arrb[i][j]=FunctionalUtility.inputBool();
 				}
 			}
-			Array2d.outputBool(arrb);
+			FunctionalUtility.outputBoolArr(arrb);
 			System.out.println("Thank you");
 			break;
 		
