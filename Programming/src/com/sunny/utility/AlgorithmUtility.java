@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 /*
@@ -139,5 +140,50 @@ public class AlgorithmUtility {
 		}
 		return listIntArr;
 	}
+	public static boolean isAnagramString(String str1,String str2)
+	{
+		char[] strone=str1.toCharArray();
+		char[] strtwo=str2.toCharArray();
+		Arrays.sort(strone);Arrays.sort(strtwo);
+		for (int i = 0; i < strone.length; i++) 
+        {
+			if (strone[i] != strtwo[i]) 
+            return false; 
+        }
+		return true;
+	}
+
+	public static boolean isPrime(int num) 
+	{
+		for(int i=2;i<=num/2;i++)
+		{
+			if(num%i==0)
+				return false;
+		}
+		return true;
+	}
+	static boolean areAnagramsInteger(int a, int b) 
+    { 
+        // To store the frequencies of 
+        // the digits in a and b 
+        int [] freqA = new int[10]; 
+        int [] freqB = new int[10];
+        for (int i = 0; i < 10; i++)  
+        { 
+        	int ra = a%10;
+        	freqA[ra]++;
+        	a=a/10;
+        	int rb = b%10;
+        	freqB[rb]++;
+        	b=b/10;
+        }
+        Arrays.sort(freqA);Arrays.sort(freqA);
+        for (int i = 0; i < freqA.length; i++) 
+        {
+			if (freqA[i] != freqB[i]) 
+            return false; 
+        }
+		return true;
+    } 
 	
 }
