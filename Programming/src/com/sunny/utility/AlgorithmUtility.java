@@ -1,5 +1,6 @@
 package com.sunny.utility;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -78,6 +79,16 @@ public class AlgorithmUtility {
 		}
 		return array;
 	}
+	public static String inputFromTxtmessage() throws Exception
+	{
+		File obj=new File("/home/admin1/SunnyRaj/Programming/lib/message.txt");
+		Scanner scan = new Scanner(obj);String result="";
+		while(scan.hasNext())
+		{
+			result=result+scan.next();
+		}
+		return result;
+	}
 	public static String[] inputFromTxtFile() throws IOException 
 	{
 		 String data = ""; 
@@ -120,10 +131,9 @@ public class AlgorithmUtility {
 	{
 		for(int i=0;i<list.size();i++)
 		{
-			System.out.println(list.get(i));
+			System.out.print(list.get(i)+" , ");
 		}
 	}
-
 	public static ArrayList<Integer> bubbleSortListOfInt(ArrayList<Integer> listIntArr) 
 	{
 		for(int i=0;i<listIntArr.size();i++)
@@ -144,13 +154,16 @@ public class AlgorithmUtility {
 	{
 		char[] strone=str1.toCharArray();
 		char[] strtwo=str2.toCharArray();
-		Arrays.sort(strone);Arrays.sort(strtwo);
+		if(strone.length!=strtwo.length) return false;
+		else
+		{Arrays.sort(strone);Arrays.sort(strtwo);
 		for (int i = 0; i < strone.length; i++) 
         {
 			if (strone[i] != strtwo[i]) 
             return false; 
         }
 		return true;
+		}
 	}
 
 	public static boolean isPrime(int num) 
@@ -162,28 +175,36 @@ public class AlgorithmUtility {
 		}
 		return true;
 	}
-	static boolean areAnagramsInteger(int a, int b) 
-    { 
-        // To store the frequencies of 
-        // the digits in a and b 
-        int [] freqA = new int[10]; 
-        int [] freqB = new int[10];
-        for (int i = 0; i < 10; i++)  
-        { 
-        	int ra = a%10;
-        	freqA[ra]++;
-        	a=a/10;
-        	int rb = b%10;
-        	freqB[rb]++;
-        	b=b/10;
-        }
-        Arrays.sort(freqA);Arrays.sort(freqA);
-        for (int i = 0; i < freqA.length; i++) 
-        {
-			if (freqA[i] != freqB[i]) 
-            return false; 
-        }
-		return true;
+	public static boolean isPalindromeInteger(int n) 
+    {
+			int temp = n;
+			int sum = 0;
+			while (temp != 0) {
+				int r = temp % 10;
+				sum = sum * 10 + r;
+				temp = temp / 10;
+			}
+			if (sum == n)
+			{
+				return true;
+			}
+			return false;
     } 
+	public static int findGuessedNumber() {
+
+		int low = 0, high = 127, mid;
+		while (low != high) {
+			mid = (low + high) / 2;
+			System.out.println("enter 1 if no is between " + low + " - " + mid + "\nEnter 2 if no is between "
+					+ (mid + 1) + " - " + high);
+			int c = AlgorithmUtility.inputInteger();
+			mid = (low + high) / 2;
+			if (c == 1)
+				high = mid;
+			else
+				low = mid + 1;
+		}
+		return low;
+	}
 	
 }
