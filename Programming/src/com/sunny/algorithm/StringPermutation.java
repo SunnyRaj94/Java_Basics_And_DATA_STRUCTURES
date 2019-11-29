@@ -1,5 +1,7 @@
 package com.sunny.algorithm;
 
+import java.util.ArrayList;
+
 import com.sunny.utility.AlgorithmUtility;
 /*
 * created by:SunnyRaj
@@ -10,6 +12,7 @@ public class StringPermutation
 {	
 	//storing it in a static variable
 	static String strmain=AlgorithmUtility.inputString();
+	static ArrayList <String>permutations = new ArrayList();
 	//used to find permutation of any given string
 	public static String combinations(int n,int len,String str)
 	{
@@ -28,6 +31,7 @@ public class StringPermutation
 					}
 				res=res+temp;
 				System.out.println(res);
+				permutations.add(res);
 				t--;
 				trail=res;
 			}
@@ -44,7 +48,6 @@ public class StringPermutation
 	        strmain=sxy;
 			return combinations(n, sxy.length(), sxy);
 			
-			//return "Still left";
 		}
 	}
 	

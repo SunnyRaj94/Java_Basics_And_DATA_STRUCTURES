@@ -1,5 +1,10 @@
 package com.sunny.utility;
-
+/*
+* created by:SunnyRaj
+* Date 25/11/2019
+* Purpose: this programm is used to generate common occuring methods in junit_testing section
+**/
+// it stores the user details
 public class UserDetails
 {
 	private String firstName;

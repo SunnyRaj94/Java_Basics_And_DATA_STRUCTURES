@@ -8,11 +8,16 @@ import java.util.Scanner;
 **/
 
 public class TicTacToe {
-
+	// making a statinc variable for determining the player
 	static int player = 0;
+	
+	// making a board of 3*3
 	static int[][] BOARD = new int[3][3];
-	static boolean isEmpty = true;
 
+	// variable whic decides the winning condition
+	static boolean isEmpty = true;
+	
+	// method to determine the values in the particular index of the board
 	static void initBoard() {
 		System.out.println("TIC TAC TOE GAME\nComputer is o\nPlayer  is x ");
 		for (int i = 0; i < BOARD.length; i++) {
@@ -23,7 +28,7 @@ public class TicTacToe {
 		System.out.println("Board is this :");
 		dispBoard();
 	}
-
+	// method to display the elements in the board
 	static void dispBoard() {
 		int count = 0;
 		for (int i = 0; i < BOARD.length; i++) {
@@ -46,11 +51,7 @@ public class TicTacToe {
 		}
 		System.out.println("---------------");
 	}
-	/*
-	 * static void putVal(int i, int j, int player) { if if (player % 2 == 0) {
-	 * BOARD[i][j] = 0; } else BOARD[i][j] = 1; }
-	 */
-
+	// method to put the values on to board
 	static void putVal() {
 		int i;
 		int j;
@@ -74,7 +75,7 @@ public class TicTacToe {
 			putVal();
 
 	}
-
+	// method to check the winning condition
 	static boolean win() {
 		return ((BOARD[0][0] + BOARD[0][1] + BOARD[0][2] == player * 3)
 				|| (BOARD[1][0] + BOARD[1][1] + BOARD[1][2] == player * 3)
@@ -85,7 +86,7 @@ public class TicTacToe {
 				|| (BOARD[0][0] + BOARD[1][1] + BOARD[2][2] == player * 3)
 				|| (BOARD[2][0] + BOARD[1][1] + BOARD[0][2] == player * 3));
 	}
-
+	//main driver method wich executes the whole methods
 	static void play() {
 		initBoard();
 		while (isEmpty) {

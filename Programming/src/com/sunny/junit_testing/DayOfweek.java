@@ -8,32 +8,14 @@ import com.sunny.utility.TestingUtility;
 
 public class DayOfweek 
 {	
+	// static variable to store number of days that occurs in a month in a non leap year
 	public static int month[]= {31,28,31,30,31,30,31,31,30,31,30,31};
+	
+	// static variable to store number of days that occur in a month in a leap year
 	public static int monthLeap[]= {31,29,31,30,31,30,31,31,30,31,30,31};
+	// stores name of days in a sequential order
 	public static String week[]= {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
-	/*public static int dayOfWeek(int y,int m ,int d)
-	{
-		int year=y;int mdays[]= monthLeap;
-		long numberDays=0;
-		if((year%4==0||year%400==0)&&year%100!=0)
-			mdays=mdays;
-		else
-			mdays=month;
-		for(int i=0;i<year;i++)
-		{
-			if((i%4==0||i%400==0)&&i%100!=0)
-				numberDays=numberDays+366;
-			else
-				numberDays=numberDays+365;
-		}
-		for(int j=0;j<m;j++)
-		{
-			numberDays=numberDays+mdays[j];
-		}
-		numberDays=numberDays+d-5;
-		return (int) (numberDays%7);
-	}
-	*/
+	// it is used to take and validating year input
 	public int inputYear()
 	{
 		System.out.println("pLEASE eNTER yEAR");
@@ -46,6 +28,7 @@ public class DayOfweek
 			return inputYear();
 		}
 	}
+	// used to take and validating month input
 	public int inputMonth()
 	{
 		System.out.println("pLEASE eNTER MONTH");
@@ -58,6 +41,7 @@ public class DayOfweek
 			return inputMonth();
 		}
 	}
+	// used to take and validate date input with respect to month and year
 	public int inputDate(int mth ,int year)
 	{
 		System.out.println("pLEASE eNTER Date");
@@ -78,12 +62,16 @@ public class DayOfweek
 	public static void main(String[] args) 
 	{
 		DayOfweek d = new DayOfweek();
+		//year input
 		int year = d.inputYear();
+		// taking month input
 		int month= d.inputMonth();
+		// taking date input
 		int date= d.inputDate(month, year);
+		// returning the index on which we will obtain the name of day
 		int res=TestingUtility.dayOfWeek(date, month, year);
-		System.out.println(res);
 		String day =week[res];
+		// printing the output
 		System.out.println("the day on given date is:   "+day);
 		
 	}

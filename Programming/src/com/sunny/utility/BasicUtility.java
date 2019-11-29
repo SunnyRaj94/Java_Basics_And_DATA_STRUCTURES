@@ -37,12 +37,12 @@ public class BasicUtility
 			if (Math.random() < 0.5)
 				{
 				result[0]++;//tails
-				System.out.println("tails=="+result[0]);
+				System.out.println("tails");
 				}
 			else
 				{
 				result[1]++;//heads
-				System.out.println("heads=="+result[1]);
+				System.out.println("heads");
 				}
 		}
 		return result;

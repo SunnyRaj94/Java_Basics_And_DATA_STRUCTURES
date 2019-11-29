@@ -11,9 +11,10 @@ public class HarmonicValue
 {
 	public static void main(String[] args) 
 	{
+		// taking souble input from the user
 	   	System.out.println("Enter a number: ");
 		double n=BasicUtility.inputDouble();
-		
+		//obtaing the harmonic value
 		if(n>0)
 	 	{
 			System.out.println("The Harmonic Value for the number is: "+BasicUtility.harmonicValue(n));

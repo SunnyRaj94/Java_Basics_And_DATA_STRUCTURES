@@ -5,7 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import com.sunny.utility.TestingUtility;
-
+/*
+* created by:SunnyRaj
+* Date 25/11/2019
+* Purpose: this programm is used to test the outputs in testingutility Class
+**/
 class TestingUtilityTest {
 
 	@Test

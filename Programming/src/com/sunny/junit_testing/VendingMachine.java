@@ -10,6 +10,7 @@ import com.sunny.utility.TestingUtility;
 public class VendingMachine 
 {
 	static int[] notes= {1,2,5,10,50,100,500,1000};
+	static int[] countParticular= new int[8];
 	static int totalnotes=0;
 	//this method is printing out the change of given currency
 	public String change(int amount,int n)
@@ -23,6 +24,7 @@ public class VendingMachine
 				amount=amount-notes[n];
 				count++;
 			}
+			countParticular[n]=count;
 			System.out.println("you got  "+count+"  "+notes[n]+"rupee notes");// notes get changed
 			n--;totalnotes=totalnotes+count;
 			return change(amount,n);

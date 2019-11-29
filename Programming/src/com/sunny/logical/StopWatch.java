@@ -10,8 +10,11 @@ public class StopWatch
 {
 	public static void main(String[] args) 
 	{
+		// storing the start time
 		long startTimer=LogicalUtility.start();
+		// storing the stop time
 		long stopTimer =LogicalUtility.stop();
+		// printing the difference between those times
 		System.out.println("Time Elapsed : "+(stopTimer-startTimer)+"  milliseconds");
 		
 	}

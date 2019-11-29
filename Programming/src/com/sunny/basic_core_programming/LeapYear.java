@@ -11,7 +11,9 @@ public class LeapYear
 {
 	public static void main(String[] args) 
 	{
+		// taking the value from user
 		int year = BasicUtility.inputInt();
+		//checking if it is leap year
 		BasicUtility.isLeapYear(year);
 	}
 }

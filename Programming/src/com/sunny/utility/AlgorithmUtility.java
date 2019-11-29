@@ -42,26 +42,24 @@ public class AlgorithmUtility {
 		     System.out.println(a[i]);		//printing the sorted array
 		}
 	}
-	
+	// used to take input in string array
 	public static String[] inputStringArr() {
 		int size = AlgorithmUtility.inputInteger();
 
-//		AlgorithmUtility a = new AlgorithmUtility();
-
-		String arr[] = new String[size];// {"Sunny","Bhumika","Rahul","ajay","vijay"};
+		String arr[] = new String[size];
 
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = AlgorithmUtility.inputS();
 		}
 		return arr;
 	}
-
+	//use to display output of String type array
 	public static void display(String[] sorted) {
 		for (int i = 0; i < sorted.length; i++) {
 			System.out.print("  " + sorted[i]);
 		}
 	}
-
+	// used to return a sorted array of String
 	public static String[] insertionSort(String[] array,int f) 
 	{
 		String temp="";
@@ -79,6 +77,7 @@ public class AlgorithmUtility {
 		}
 		return array;
 	}
+	// this method is returning a string which is reading from a file
 	public static String inputFromTxtmessage() throws Exception
 	{
 		File obj=new File("/home/admin1/SunnyRaj/Programming/lib/message.txt");
@@ -89,6 +88,7 @@ public class AlgorithmUtility {
 		}
 		return result;
 	}
+	//this method is returning all words in a txt file in a string rtype array
 	public static String[] inputFromTxtFile() throws IOException 
 	{
 		 String data = ""; 
@@ -97,24 +97,20 @@ public class AlgorithmUtility {
 		    return data.split(" "); 
 	}
 	
-	
+	// this method is returning a boolean value after checking if a word is present in a file
 	public static boolean findWord(String word) throws IOException 
 	{
 		String[] sentence=inputFromTxtFile();
 		for(int i=0;i<sentence.length;i++)
 		{
-			for(int j=0;j<sentence[i].length();j++)
+			if(sentence[i].compareToIgnoreCase(word)==0)
 			{
-				char check[]=sentence[i].toCharArray();
-				char w[]=word.toCharArray();
-				if(check[j]!=w[j])
-					break;
-				else
-					return true;
+				return true;
 			}
 		}
 		return false;
 	}
+	// this method is returning a list of integers by taking input from the user
 	public static List<Integer> inputListOfInt()
 	{
 		ArrayList<Integer> list=new ArrayList();
@@ -127,6 +123,7 @@ public class AlgorithmUtility {
 		}
 		return list;
 	}
+	// this method is used to show output of list of integers to the console
 	public static void displayListOfInt(List list)
 	{
 		for(int i=0;i<list.size();i++)
@@ -134,6 +131,7 @@ public class AlgorithmUtility {
 			System.out.print(list.get(i)+" , ");
 		}
 	}
+	// this method is taking a list of integer and returning that list after bubble sorting
 	public static ArrayList<Integer> bubbleSortListOfInt(ArrayList<Integer> listIntArr) 
 	{
 		for(int i=0;i<listIntArr.size();i++)
@@ -150,6 +148,8 @@ public class AlgorithmUtility {
 		}
 		return listIntArr;
 	}
+	
+	// this method checks two strings are anagram or not
 	public static boolean isAnagramString(String str1,String str2)
 	{
 		char[] strone=str1.toCharArray();
@@ -165,7 +165,8 @@ public class AlgorithmUtility {
 		return true;
 		}
 	}
-
+	
+	//this method checks the input number is prime or not
 	public static boolean isPrime(int num) 
 	{
 		for(int i=2;i<=num/2;i++)
@@ -175,6 +176,7 @@ public class AlgorithmUtility {
 		}
 		return true;
 	}
+	// this method checks that input number is pallindrome or not
 	public static boolean isPalindromeInteger(int n) 
     {
 			int temp = n;
@@ -190,6 +192,7 @@ public class AlgorithmUtility {
 			}
 			return false;
     } 
+	// this method is used to predict the guessed number by user
 	public static int findGuessedNumber() {
 
 		int low = 0, high = 127, mid;

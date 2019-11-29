@@ -1,23 +1,31 @@
 package com.sunny.utility;
 
 import java.util.Scanner;
-
+/*
+* created by:SunnyRaj
+* Date 25/11/2019
+* Purpose: this programm is used to generate common occuring methods in junit_testing section
+**/
 public class TestingUtility
-{
+{	
+	//common static scanner object
+	private static final Scanner sc= new Scanner(System.in);
+	//used to take integer input from the user
 	public static int inputInteger()
 	{
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Please Enter Number");
 		int number = sc.nextInt();
 		return number;
 	}
+	//used to ntake the double value from the user
 	public static double inputDouble()
 	{
-		Scanner sc = new Scanner(System.in);
 		System.out.println("Please Enter Number");
 		double number = sc.nextDouble();
 		return number;
 	}
+	//method that return the name of that which is going to occur on a particular date 
+	// takes a input year,month,date
 	public static int dayOfWeek(int d, int m, int y)
 	{
 		int y0 = y - (14 - m) / 12;
@@ -26,6 +34,7 @@ public class TestingUtility
 		int d0 = (d + x + (31 * m0) / 12) % 7;
 		return d0;
 	}
+	//method that is used to convert temperature into celcius and celcius into farhenhite
 	public static int temperaturConversion(int tem, char t) {
 		int conver;
 		if (t == 'c' || t == 'C') 
@@ -40,6 +49,9 @@ public class TestingUtility
 		} 
 		return conver;
 	}
+	
+	
+	// this method is used  to compute the square root of a nonnegative number c given in the input using Newton's method:
 	public static double sqrt(double c) {
 
 		double t = c;
@@ -51,6 +63,7 @@ public class TestingUtility
 
 		return t;
 	}
+	// this method is returning  the integer array of binary equivalent of given decimal value
 	public static int[] toBinary(int d) {
 
 		String bin = "";
@@ -65,6 +78,7 @@ public class TestingUtility
 		}
 		return stringToIntArray(bin);
 	}
+	// method is converting string into integer array
 	public static int[] stringToIntArray(String bin) 
 	{
 		int[] binary = new int[bin.length()];
@@ -73,6 +87,7 @@ public class TestingUtility
 		}
 		return binary;
 	}
+	// method is converting binary quivalent to decimal value
 	public static int toDecimal(int[] binary) {
 		int dec = 0, j = 0;
 		for (int i = binary.length - 1; i >= 0; i--) 
@@ -84,6 +99,7 @@ public class TestingUtility
 		}
 		return dec;
 	}
+	// this method calculates the monthly payments you would have to make over Y years to pay off a P principal loan amount at R per cent interest compounded monthly
 	public static double monthlyPayment(double p, double y, double r)
 	{
 		double n = 12 * y;
@@ -92,11 +108,7 @@ public class TestingUtility
 		return payment;
 		
 	}
-	/**
-	 * Function to print array
-	 *
-	 * @param array the array to print integer on console
-	 */
+	// this method is showing the integer array output to the console
 	public static void showArr(int[] arr) {
 		// System.out.println("array is ");
 		for (int i = 0; i < arr.length; i++) {
@@ -104,14 +116,8 @@ public class TestingUtility
 		}
 		System.out.println();
 	}
-
-
-	/**
-	 * Function to check if no is power of 2
-	 *
-	 * @param number to check the for power of 2
-	 * @return boolean for prime no
-	 */
+	
+	//checks if a number is power of two
 	public static boolean powerOf2(int n) {
 		// calculate power of 2 using math.pow
 		// check if is equal to given no
@@ -125,13 +131,7 @@ public class TestingUtility
 		}
 		return false;
 	}
-
-	/**
-	 * Function to swap nibbles in array
-	 *
-	 * @param int array to swap nibbles in array
-	 * @return return swapped array
-	 */
+	// returns the reversed integer array of given array
 	public static int[] swapNibbles(int[] arr) {
 		// swap nibbles at first and last of the array
 		// j is used for saving last 4 index of the array
@@ -145,6 +145,7 @@ public class TestingUtility
 		}
 		return arr;
 	}
+	// used to take and validate whether input is c or f
 	public static char c_f_Input() 
 	{
 		Scanner s = new Scanner(System.in);

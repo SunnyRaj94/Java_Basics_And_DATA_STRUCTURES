@@ -20,10 +20,13 @@ public class Array2d
 		int r = FunctionalUtility.inputInteger();
 		System.out.println("Enter number of columns");
 		int c = FunctionalUtility.inputInteger();
+		// switch cases for letting user to decide which array he wants to enter
 		switch(input)
 			{
+		// case to deal with integer type array
 		case 1:
 			int [][] arr = new int[r][c];
+			// taking input
 			for(int i=0;i<arr.length;i++)
 			{
 				for(int j=0;j<arr[0].length;j++)
@@ -31,11 +34,14 @@ public class Array2d
 					arr[i][j]=FunctionalUtility.inputInteger();
 				}
 			}
+			//displaying that input to the console
 			FunctionalUtility.outputIntArr(arr);
 			System.out.println("Thank you");
 			break;
+			// case to deal with double type array
 		case 2:
 			double [][] arrd = new double[r][c];
+			// taking input
 			for(int i=0;i<arrd.length;i++)
 			{
 				for(int j=0;j<arrd[0].length;j++)
@@ -43,10 +49,12 @@ public class Array2d
 					arrd[i][j]=FunctionalUtility.inputDouble();
 				}
 			}
+			// displaying thatb input to the console
 			FunctionalUtility.outputDoubleArr(arrd);
 			System.out.println("Thank you");
 			break;
 		case 3:
+			//case to deal with boolean type array
 			boolean [][] arrb = new boolean[r][c];
 			for(int i=0;i<arrb.length;i++)
 			{
@@ -55,6 +63,7 @@ public class Array2d
 					arrb[i][j]=FunctionalUtility.inputBool();
 				}
 			}
+			//showing that array to the output
 			FunctionalUtility.outputBoolArr(arrb);
 			System.out.println("Thank you");
 			break;
