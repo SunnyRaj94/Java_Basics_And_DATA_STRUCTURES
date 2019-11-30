@@ -209,5 +209,36 @@ public class AlgorithmUtility {
 		}
 		return low;
 	}
+	public static <E extends Comparable<E>> E[] bubbleSortGenerics(E[] inputArray) {
+
+        E temp;
+
+        boolean swapped = true;
+
+        for(int j = 1; j < inputArray.length & swapped; j++) {
+
+            swapped = false;
+
+            for(int i = 0; i < inputArray.length - j; i++) {
+
+                if(inputArray[i].compareTo(inputArray[i+1]) > 0) {
+
+                    temp = inputArray[i];
+
+                    inputArray[i] = inputArray[i+1];
+
+                    inputArray[i+1] = temp;
+
+                    swapped = true;
+
+                }
+
+            }
+
+        }
+        return inputArray;
+
+    }
+
 	
 }

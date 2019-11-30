@@ -1,8 +1,5 @@
 package com.sunny.algorithm;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import com.sunny.utility.AlgorithmUtility;
 import com.sunny.utility.RegxUtility;
 import com.sunny.utility.UserDetails;
