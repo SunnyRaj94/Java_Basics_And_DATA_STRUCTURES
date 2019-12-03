@@ -18,13 +18,16 @@ public class BankingCashCounter
 		System.out.println("Enter 0 to withdraw");
 		System.out.println("Enter  1 to deposit");
 		System.out.println("Enter 2 to stop process");
-		int choice = BankingCashCounter.inputAmount();
+		int choice = sc.nextInt();
 		while(choice!=2)
 		{
 			switch (choice)
 			{
 			case 0:
-				q.dequeue();
+				if(q.balance==1000)
+					System.out.println("Withdrawal cannnot happen at this stage");
+				else
+					q.dequeue();
 				break;
 			case 1:
 				q.enqueue(BankingCashCounter.inputAmount());
