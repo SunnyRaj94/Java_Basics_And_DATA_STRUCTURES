@@ -3,7 +3,7 @@ package com.sunny.data_structure.prime_numbers;
 public class PrimeNumberAndAnagarm
 {
 	static List[] anagramlist = new List[10];
-	static List[] notinanagramlist = new List[10];
+	List[] notinanagramlist = new List[10];
 	static int[] primes = new int[1000];
 
 	public PrimeNumberAndAnagarm()
@@ -14,7 +14,7 @@ public class PrimeNumberAndAnagarm
 		}
 		for (int i = 0; i < notinanagramlist.length; i++) 
 		{
-			notinanagramlist[i] = new List();
+			notinanagramlist[i] = new List();	
 		}
 	}
 	public void primes()
@@ -43,10 +43,7 @@ public class PrimeNumberAndAnagarm
 			{
 				if(Utility.areAnagrams(primes[i],primes[j]))
 				{
-					if(anagramlist[i/100].isPresent(primes[i]))
-						{
 						anagramlist[primes[i]/100].add(primes[i]);
-						}
 				}
 			}
 		}
@@ -60,6 +57,7 @@ public class PrimeNumberAndAnagarm
 				notinanagramlist[i/100].add(i);
 			}
 		}
+		notinanagramlist[0].display();
 	}
 	public static void main(String[] args) 
 	{
@@ -67,8 +65,6 @@ public class PrimeNumberAndAnagarm
 		p.primes();
 		p.haveAnagrams();
 		p.dontHaveAnagrams();
-		notinanagramlist[0].display();
-		
 	}
 
 }
