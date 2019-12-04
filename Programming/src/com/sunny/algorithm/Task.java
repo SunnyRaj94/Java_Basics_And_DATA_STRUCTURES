@@ -2,7 +2,11 @@ package com.sunny.algorithm;
 
 import java.util.Arrays;
 import java.util.Scanner;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to show if a list of work is finished in given deadline or not
+**/
 public class Task {
 	public static void main(String[] args)
 	{
