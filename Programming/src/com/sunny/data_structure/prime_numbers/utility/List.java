@@ -1,4 +1,4 @@
-package com.sunny.data_structure.prime_numbers;
+package com.sunny.data_structure.prime_numbers.utility;
 
 public class List 
 {

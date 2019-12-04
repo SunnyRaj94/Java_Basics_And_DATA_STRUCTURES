@@ -1,4 +1,7 @@
-package com.sunny.data_structure.prime_numbers;
+package com.sunny.data_structure.prime_numbers.runners;
+
+import com.sunny.data_structure.prime_numbers.utility.List;
+import com.sunny.data_structure.prime_numbers.utility.Utility;
 
 public class PrimeNumbers 
 {

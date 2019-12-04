@@ -1,4 +1,7 @@
-package com.sunny.data_structure.prime_numbers;
+package com.sunny.data_structure.prime_numbers.runners;
+
+import com.sunny.data_structure.prime_numbers.utility.List;
+import com.sunny.data_structure.prime_numbers.utility.Utility;
 
 public class PrimeNumberAndAnagarm
 {
@@ -43,16 +46,20 @@ public class PrimeNumberAndAnagarm
 			{
 				if(Utility.areAnagrams(primes[i],primes[j]))
 				{
+					if(anagramlist[primes[i]/100].isPresent(primes[i])==false)
+						{
 						anagramlist[primes[i]/100].add(primes[i]);
+						}
 				}
 			}
 		}
+		//anagramlist[0].display();
 	}
 	public void dontHaveAnagrams()
 	{
 		for(int i=1;i<1000;i++)
 		{
-			if(anagramlist[i/100].isPresent(i)==false)
+			if(anagramlist[i/100].isPresent(i))
 			{
 				notinanagramlist[i/100].add(i);
 			}
@@ -62,7 +69,7 @@ public class PrimeNumberAndAnagarm
 	public static void main(String[] args) 
 	{
 		PrimeNumberAndAnagarm p = new PrimeNumberAndAnagarm();
-		p.primes();
+		p.primes();p.displayPrimes();
 		p.haveAnagrams();
 		p.dontHaveAnagrams();
 	}

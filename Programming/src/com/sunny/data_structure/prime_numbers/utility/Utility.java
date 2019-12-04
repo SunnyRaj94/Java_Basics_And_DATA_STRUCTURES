@@ -1,4 +1,4 @@
-package com.sunny.data_structure.prime_numbers;
+package com.sunny.data_structure.prime_numbers.utility;
 
 public class Utility 
 {
@@ -33,7 +33,7 @@ public class Utility
 
 	// Function that returns true if a and b
 	// are anagarams of each other
-	static boolean areAnagrams(int a, int b) {
+	public static boolean areAnagrams(int a, int b) {
 
 		// To store the frequencies of
 		// the digits in a and b
