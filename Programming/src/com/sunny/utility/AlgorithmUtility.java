@@ -209,6 +209,7 @@ public class AlgorithmUtility {
 		}
 		return low;
 	}
+	//generic method for bubble sorting
 	public static <E extends Comparable<E>> E[] bubbleSortGenerics(E[] inputArray) {
 
         E temp;
@@ -237,8 +238,54 @@ public class AlgorithmUtility {
 
         }
         return inputArray;
-
     }
+	// method for sorting two distinct string arrays into one
+	public static void sort(String str[], int left, int right) {
+		if (left < right) {
+			int middle = (left + right) / 2;
 
+			sort(str, left, middle);
+			sort(str, middle + 1, right);
+
+			merge(str, left, middle, right);
+		}
+	}
+	//supportive method for merge sorting
+	public static void merge(String[] string, int left, int middle, int right) {
+		int numberOne = middle - left + 1;
+		int numberTwo = right - middle;
+
+		String left1[] = new String[numberOne];
+		String right1[] = new String[numberTwo];
+
+		for (int i = 0; i < numberOne; i++)
+			left1[i] = string[left + i];
+		for (int i = 0; i < numberTwo; i++)
+			right1[i] = string[middle + 1 + i];
+
+		int i = 0, j = 0;
+		int k = left;
+		while (i < numberOne && j < numberTwo) {
+			if (left1[i].compareTo(right1[j]) < 0) {
+				string[k] = left1[i];
+				i++;
+			} else {
+				string[k] = right1[j];
+				j++;
+			}
+			k++;
+		}
+		while (i < numberOne) {
+			string[k] = left1[i];
+			i++;
+			k++;
+		}
+		while (j < numberTwo) {
+			string[k] = right1[j];
+			j++;
+			k++;
+		}
+	}
+	
 	
 }
