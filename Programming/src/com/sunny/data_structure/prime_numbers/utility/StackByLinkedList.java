@@ -1,7 +1,5 @@
 package com.sunny.data_structure.prime_numbers.utility;
 
-import com.sunny.data_structure.balanced_paranthesis.Stack;
-
 public class StackByLinkedList 
 {
 	static Node head;

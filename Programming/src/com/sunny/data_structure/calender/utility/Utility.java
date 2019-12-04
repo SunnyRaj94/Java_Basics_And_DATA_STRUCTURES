@@ -1,4 +1,4 @@
-package com.sunny.data_structure.calender;
+package com.sunny.data_structure.calender.utility;
 
 import java.util.Scanner;
 
