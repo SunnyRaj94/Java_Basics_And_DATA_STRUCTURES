@@ -1,11 +1,16 @@
 package com.sunny.data_structure.calender.runner;
 import com.sunny.data_structure.calender.utility.Utility;
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to display the months calander by using 2d array
+**/
 public class Calender 
 {
 	Utility u = new Utility();
 	char[] days = { 'S', 'M', 'T', 'W', 'T', 'F', 'S' };
 	int[][] calender = new int[6][7];
-
+	// public constructor
 	public Calender() {
 		for (int i = 0; i < 6; i++) {
 			for (int j = 0; j < 7; j++) {
@@ -13,7 +18,7 @@ public class Calender
 			}
 		}
 	}
-
+	// display calender
 	public void displayCalender() {
 		for(int i=0;i<7;i++)
 		{
@@ -31,7 +36,7 @@ public class Calender
 			System.out.println("- - - - - - - - - - - -");
 		}
 	}
-	
+	// main logic to add days to calender
 	public void playCalender()
 	{
 		int year=u.inputYear();

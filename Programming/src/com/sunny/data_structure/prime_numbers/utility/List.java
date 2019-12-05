@@ -1,9 +1,16 @@
 package com.sunny.data_structure.prime_numbers.utility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is 
+**/
 public class List 
 {
+	// index 
 		int index = 0;
+		// dynamic array
 		int[] array;
+		// adding elements into array
 		public void add(int c)
 		{
 			int i = index+1;
@@ -25,6 +32,7 @@ public class List
 				index++;
 			}
 		}
+		// to display array
 		public int[] display()
 		{
 			for (int i=0;i<index;i++)
@@ -33,6 +41,7 @@ public class List
 			}
 			return array;
 		}
+		// to remove an element
 		public void remove(int item)
 		{
 			int[] replace = new int[index-1];
@@ -47,6 +56,7 @@ public class List
 			index--;
 			array = replace;
 		}
+		// to check if an element is present 
 		public boolean isPresent(int item)
 		{
 			for (int i=0;i<index;i++)

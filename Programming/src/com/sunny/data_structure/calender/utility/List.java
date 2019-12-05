@@ -1,5 +1,9 @@
 package com.sunny.data_structure.calender.utility;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to make our own list structure
+**/
 public class List<T> {
 	public class Node<T> {
 		public Node next;

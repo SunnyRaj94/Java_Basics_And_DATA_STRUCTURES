@@ -1,9 +1,16 @@
 package com.sunny.data_structure.hashing_function;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to make our own stack 
+**/
 public class Slot 
 {
+	// index for stack
 	int index = 0;
+	// dynamic array
 	int[] array;
+	// adding elements into array
 	public void add(int c)
 	{
 		int i = index+1;
@@ -25,6 +32,7 @@ public class Slot
 			index++;
 		}
 	}
+	// to display the whole array
 	public int[] display()
 	{
 		for (int i=0;i<index;i++)
@@ -33,6 +41,7 @@ public class Slot
 		}
 		return array;
 	}
+	// to remove an element from array
 	public void remove(int item)
 	{
 		int[] replace = new int[index-1];
@@ -47,6 +56,7 @@ public class Slot
 		index--;
 		array = replace;
 	}
+	// to check if a element is present in an array or not
 	public boolean isPresent(int item)
 	{
 		for (int i=0;i<index;i++)

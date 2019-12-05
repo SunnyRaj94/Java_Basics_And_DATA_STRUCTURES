@@ -1,19 +1,27 @@
 package com.sunny.data_structure.hashing_function;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to store the divisible elements by 11
+**/
 import java.util.Scanner;
 
 public class Hashing_function 
 {
+	// a 2d slot array
 	static Slot slot[] = new Slot[11];
+	// public constructor
 	public Hashing_function() {
 		for (int i = 0; i < slot.length; i++) {
 			slot[i] = new Slot();
 		}
 	}
+	// putting value into array
 	void put(int n) 
 	{
 		slot[n % 11].add(n);
 	}
+	//search if that value is present in that array
 	boolean search(int n) {
 		return slot[n % 11].isPresent(n);
 	}

@@ -2,7 +2,12 @@ package com.sunny.data_structure.pallindrome_checker;
 
 import java.util.Arrays;
 import java.util.Scanner;
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to  A palindrome is a string that reads the same forward and backward, for example, radar, toot, and madam. We would like to construct an algorithm to input a string of characters and check whether it is a palindrome.
 
+**/
 public class Pallindrome_Check 
 {
 	public static String inputString()

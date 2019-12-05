@@ -1,13 +1,20 @@
 package com.sunny.data_structure.prime_numbers.utility;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to make our own stack implementation by using list
+**/
 public class StackByLinkedList 
 {
+	// node
 	static Node head;
+	// node class
 	class Node
 	{
 		int data;
 		Node next;
 	}
+	// adds element at the start
 	public void addFirst(int item)
 	{
 		Node node = new Node();
@@ -22,6 +29,7 @@ public class StackByLinkedList
 			head = node;
 		}
 	}
+	// display the whole list
 	public void display()
 	{
 		Node node = head;
@@ -31,6 +39,7 @@ public class StackByLinkedList
 			node =node.next;
 		}
 	}
+	// to display linked list in reversed manner
 	public void displayReverse()
 	{
 		Node node = head;
@@ -48,6 +57,7 @@ public class StackByLinkedList
 		}
 		
 	}
+	// return the size
 	public static int size()
 	{
 		int count =0;
@@ -59,6 +69,7 @@ public class StackByLinkedList
 		}
 		return count;
 	}
+	// returns the value at it
 	public int value(int i) 
 	{
 		Node node = head;
@@ -71,6 +82,7 @@ public class StackByLinkedList
 		}
 		return value.data;
 	}
+	// to ckeck if value is present
 	public boolean isPresent(int item)
 	{
 		StackByLinkedList l = new StackByLinkedList();

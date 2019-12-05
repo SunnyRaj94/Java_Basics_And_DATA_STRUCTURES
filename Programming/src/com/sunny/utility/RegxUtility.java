@@ -33,7 +33,6 @@ public class RegxUtility
 			p = Pattern.compile(REGEX_DATE);
 			m = p.matcher(message3); 
 			String message4 = m.replaceAll(userDetails.date());
-
 			return message4;
 		}
 }

@@ -1,5 +1,9 @@
 package com.sunny.data_structure.ordered_list;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to make our own ordered linked list class
+**/
 public class OrderedLinkedList {
 	Node head ;
 
@@ -28,15 +32,18 @@ public class OrderedLinkedList {
 			{
 				Node insert = head;
 				Node put = null;
-				while (insert != null && insert.data <= item) {
+				while (insert != null && insert.data <= item) 
+				{
 					put = insert;
 					insert = insert.next;
 				}
-				if (insert != null) {
+				if (insert != null) 
+				{
 					Node value = put.next;
 					put.next = node;
 					node.next = insert;
-				} else {
+				} else 
+				{
 					Node value = put.next;
 					put.next = node;
 				} 
@@ -117,20 +124,28 @@ public class OrderedLinkedList {
 			}
 			return count;
 		}
-		//removes and returns an item from the last of the list
-		public int pop()
-		{
-			Node temp = head;
-			Node poping=null;
-			while(temp.next!=null)
-			{
-				poping=temp;
-				temp=temp.next;
-			}
-			Node value =poping;
-			poping.next=null;
-			return value.data;
-		}
+		
+//		public int pop()
+//		{
+//				if (head.next!=null) {
+//					Node temp = head;
+//					Node poping = null;
+//					while (temp.next != null) {
+//						poping = temp;
+//						temp = temp.next;
+//					}
+//					Node value = poping;
+//					poping.next = null;
+//					return value.data;
+//				}
+//				else 
+//				{
+//					Node temp = head;
+//					head =null;
+//					return temp.data;
+//				}
+//
+//		}
 		// removes and returns the item from the given index position
 		public int popAtIndex(int index)
 		{
@@ -146,4 +161,32 @@ public class OrderedLinkedList {
 			remove.next=temp.next;
 			return value.data;
 		}
+		//removes and returns an item from the last of the list
+		 public int pop()
+		 {
+			 int v=0;
+			 if(head==null)
+			 {
+				 System.out.println("Empty Linked List");
+				 return 0;
+			 }
+			 //for 1 element
+			 if(head.next==null)
+			 {	
+				 int data = head.data;
+				 head=null;
+				 return data;
+			 }
+			 //generic case
+			 Node curr=head;
+			 Node prev=null;
+			 while(curr.next!=null)
+			 {
+				 prev=curr;
+				 curr=curr.next;
+			 }
+			 v=curr.data;
+			 prev.next=null;
+			 return v;
+		 }
 }

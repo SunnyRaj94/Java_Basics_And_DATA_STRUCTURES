@@ -5,9 +5,16 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 import com.sunny.data_structure.unordered_list.UnOrderedLinkedList.Node;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used Read the Text from a file, split it into words and arrange it as Linked List. 
+* Take a user input to search a Word in the List. If the Word is not found then add it to the list, and if it found 
+* then remove the word from the List. In the end save the list into a file
+**/
 public class UnOrderedList {
 	
+	// takes input from the file
 	public static String inputFromFile() throws Exception
 	{
 		String fileText ="";
@@ -19,10 +26,11 @@ public class UnOrderedList {
 		}
 		return fileText;
 	}
+	// writes out put to the file
 	public static void writeTofile(UnOrderedLinkedList list) throws Exception
 	{
 		Node insert = list.head;
-		File file = new File("/home/admin1/SunnyRaj/Programming/lib/UnorderedListOutput.txt");
+		File file = new File("/home/admin1/SunnyRaj/Programming/lib/UnorderedListInput.txt");
 		FileWriter writer = new FileWriter(file);
 		String output="";
 		while(insert!=null)
@@ -30,6 +38,8 @@ public class UnOrderedList {
 			output = output+" "+insert.data;
 			insert=insert.next;
 		}
+		writer.write("");
+		writer.flush();
 		writer.write(output);
 		writer.flush();
 	}
@@ -43,10 +53,14 @@ public class UnOrderedList {
 		{
 			list.add(result[i]);
 		}
-		if(list.search("save"))
-			list.remove("save");
+		System.out.println("Enter the word you want to search");
+		Scanner s = new Scanner(System.in);
+		String search =s.next();
+		s.close();
+		if(list.search(search))
+			list.remove(search);
 		else
-			list.add("save");
+			list.add(search);
 		UnOrderedList.writeTofile(list);
 	}
 

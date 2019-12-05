@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 import com.sunny.junit_testing.DayOfweek;
 import com.sunny.utility.TestingUtility;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is utility class for calender
+**/
 public class Utility 
 {
 	private Scanner  s = new Scanner(System.in);
@@ -59,6 +63,7 @@ public class Utility
 			return inputDate(mth, year);
 		}
 	}
+	// returns int value based on georgiean formula
 	public int dayOfWeek(int d, int m, int y)
 	{
 		int y0 = y - (14 - m) / 12;
@@ -67,6 +72,7 @@ public class Utility
 		int d0 = (d + x + (31 * m0) / 12) % 7;
 		return d0;
 	}
+	// returns how many days in a particular month
 	public int value(int i)
 	{
 		return month[i];

@@ -1,4 +1,10 @@
 package com.sunny.data_structure.balanced_paranthesis;
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is used to find  if parenthesis are balanced in the given expression or not
+**/
+
 public class BalancedParanthesis<T>
 {
 	
@@ -9,6 +15,7 @@ public class BalancedParanthesis<T>
 		char[] ch="()))))))))))".toCharArray();
 		int i=0;int j=0;int p =0; int k=0;
 		int count=0;
+		// to push value into stack
 		while(i!=ch.length)
 		{
 			if (ch[i] == '(') 
@@ -18,6 +25,7 @@ public class BalancedParanthesis<T>
 				}
 			i++;
 		}
+		//to pop value from stack
 		while(j!=ch.length&&p!=k)
 		{
 			if (ch[j] == ')')
@@ -27,6 +35,7 @@ public class BalancedParanthesis<T>
 				}
 			j++;
 		}
+		//checking if stack is empty or not
 		if(stk.isEmpty()&&i==j)
 		{
 			System.out.println("Paranthesis is balamnced");

@@ -2,11 +2,17 @@ package com.sunny.data_structure.calender.runner;
 
 import com.sunny.data_structure.calender.utility.Queue_Stack;
 import com.sunny.data_structure.calender.utility.Utility;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to display the months calander by using stack
+**/
 public class Calender_By_Stack {
-
+	//making a object of utility class
 	Utility u= new Utility();
+	// a 2d queue structure
 	Queue_Stack[] queue = new Queue_Stack[7];
+	// a public constructor 
 	public Calender_By_Stack()
 	{
 		for(int i=0;i<7;i++)
@@ -17,7 +23,7 @@ public class Calender_By_Stack {
 		queue[0].enqueue("Th");queue[0].enqueue("Fr");queue[0].enqueue("Sa");
 		
 	}
-
+	// main logic to enter elements in calender
 	public void playCalender()
 	{
 		int year=u.inputYear();
@@ -42,7 +48,7 @@ public class Calender_By_Stack {
 			}
 		}
 	}
-	
+	// to display the calender
 	public void displayCalender()
 	{
 		for(int i=0;i<7;i++)

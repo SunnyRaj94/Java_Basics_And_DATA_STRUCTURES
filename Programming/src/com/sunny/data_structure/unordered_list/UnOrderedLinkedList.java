@@ -1,5 +1,9 @@
 package com.sunny.data_structure.unordered_list;
-
+/*
+* created by:SunnyRaj
+* Date 22/11/2019
+* Purpose: this programm is used to make our own unordered linkedlist implementations
+**/
 public class UnOrderedLinkedList<T> {
 	public class Node<T> {
 		public Node next;

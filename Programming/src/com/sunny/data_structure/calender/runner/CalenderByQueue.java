@@ -2,11 +2,18 @@ package com.sunny.data_structure.calender.runner;
 
 import com.sunny.data_structure.calender.utility.Queue_List;
 import com.sunny.data_structure.calender.utility.Utility;
-
+/*
+* created by:SunnyRaj
+* Date 24/11/2019
+* Purpose: this programm is written to display the months calander by using queue
+**/
 public class CalenderByQueue 
 {
+	// initiallizing utility class
 	Utility u= new Utility();
+	// making a 2d queue
 	Queue_List[] queue = new Queue_List[7];
+	// public constructor
 	public CalenderByQueue()
 	{
 		for(int i=0;i<7;i++)
@@ -17,7 +24,7 @@ public class CalenderByQueue
 		queue[0].enqueue("Th");queue[0].enqueue("Fr");queue[0].enqueue("Sa");
 		
 	}
-
+	// addidng elements to the calender
 	public void playCalender()
 	{
 		int year=u.inputYear();
@@ -42,7 +49,7 @@ public class CalenderByQueue
 			}
 		}
 	}
-	
+	// displaying the calender
 	public void displayCalender()
 	{
 		for(int i=0;i<7;i++)
